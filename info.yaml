@@ -43,8 +43,6 @@ documentation:
 
 # A description of what the inputs do
   inputs:               
-    - clock
-    - reset
     - adjust hours
     - adjust minutes
     - adjust seconds
