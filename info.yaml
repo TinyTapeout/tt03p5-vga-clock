@@ -40,6 +40,7 @@ documentation:
   how_to_test:  |
       Hook up a VGA monitor to the outputs and provide a clock at 31.5 MHz. Connect the 6 bit colour output up with resistors to make
       a R2R DAC. See the circuit here: https://github.com/mattvenn/6bit-pmod-vga
+      LSBs should go through 500R, MSBs go through 1000R.
 
 # A description of what the inputs do
   inputs:               
@@ -55,12 +56,12 @@ documentation:
   outputs:
     - hsync
     - vsync
-    - r0
-    - r1
-    - g0
-    - g1
     - b0
     - b1
+    - g0
+    - g1
+    - r0
+    - r1
 # A description of what the bidirectional I/O pins do
   bidirectional:
     - none
