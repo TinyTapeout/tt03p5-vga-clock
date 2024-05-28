@@ -13,7 +13,7 @@ project:
     - tt_vga_clock.v
     - vga_clock.v
     - VgaSyncGen.v
-  top_module:  "tt_vga_clock"      # Put the name of your top module here, must start with "tt_um_". Make it unique by prepending your github username
+  top_module:  "tt_um_vga_clock"      # Put the name of your top module here, must start with "tt_um_". Make it unique by prepending your github username
 
 # How many tiles your design occupies? A single tile is about 167x108 uM.
 # Before changing this, please reach out to us on discord to discuss your design.
@@ -40,11 +40,10 @@ documentation:
   how_to_test:  |
       Hook up a VGA monitor to the outputs and provide a clock at 31.5 MHz. Connect the 6 bit colour output up with resistors to make
       a R2R DAC. See the circuit here: https://github.com/mattvenn/6bit-pmod-vga
+      LSBs should go through 500R, MSBs go through 1000R.
 
 # A description of what the inputs do
   inputs:               
-    - clock
-    - reset
     - adjust hours
     - adjust minutes
     - adjust seconds
@@ -57,12 +56,12 @@ documentation:
   outputs:
     - hsync
     - vsync
-    - r0
-    - r1
-    - g0
-    - g1
     - b0
     - b1
+    - g0
+    - g1
+    - r0
+    - r1
 # A description of what the bidirectional I/O pins do
   bidirectional:
     - none
